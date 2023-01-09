@@ -10,6 +10,32 @@
 #       ex: 1 - sword, 2 - lantern, 3 - lockpick
 #   - three paths to choose from: left, middle, right
 
+p 'Please enter your name:'
+player_name = gets.chomp
+p "Hello #{player_name}"
+
+p 'Before you are three objects; a sword[1], a lantern[2], and a lockpick[3]. You may choose one item.'
+
+
+p 'Enter the number of the item you choose:'
+item_choice = gets.chomp
+def item_assignment(num)
+    inventory = []
+    if num == '1'
+        inventory << 'sword'
+       p 'You have chosen the sword.'
+    elsif num == '2'
+        inventory << 'lantern'
+       p 'You have chosen the lantern.'
+    elsif num == '3'
+        inventory << 'lockpick'
+       p 'You have chosen the lockpick.'
+    else
+       p 'There are no other items to choose from. Pick again.'
+    end
+end
+item_assignment(item_choice)
+
 # Three paths:
 #   - Monster - need sword to defeat it
 #   - Puzzle - need lantern to solve it
